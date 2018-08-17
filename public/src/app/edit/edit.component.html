@@ -1,0 +1,19 @@
+<h3>Edit this pet</h3>
+
+<form (submit)="editPet()">
+  Pet name:<br>
+  <input type="text" name="pet.name" [(ngModel)]="pet.name"/> <span style="color:red" > {{ nameErr }} </span><br>
+
+  Pet type:<br>
+  <input type="text" name="pet.type" [(ngModel)]="pet.type"/> <span style="color:red" > {{ typeErr }} </span><br>
+
+  Description:<br>
+  <input type="text" name="pet.desc" [(ngModel)]="pet.desc"/> <span style="color:red" > {{ descErr }} </span><br>
+
+  Skills (optional):<br>
+  Skill 1: <input type="text" name="pet.skillOne" [(ngModel)]="pet.skillOne"/><br>
+  Skill 2: <input type="text" name="pet.skillTwo" [(ngModel)]="pet.skillTwo"/><br>
+  Skill 3: <input type="text" name="pet.skillThree" [(ngModel)]="pet.skillThree"/><br>
+  <input class="button" type="submit" value="Edit pet"/>
+  <button class="button" [routerLink]="['/pets', pet._id]">Cancel</button>
+</form>

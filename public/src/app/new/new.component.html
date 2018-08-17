@@ -1,0 +1,19 @@
+<h3>Know of a pet needing a home?</h3>
+
+<form (submit)="newPet()">
+  Pet name:<br>
+  <input type="text" name="pet.name" [(ngModel)]="pet.name"/> <span style="color:red" > {{ nameErr }} </span><br>
+
+  Pet type:<br>
+  <input type="text" name="pet.type" [(ngModel)]="pet.type"/> <span style="color:red" > {{ typeErr }} </span><br>
+
+  Description:<br>
+  <input type="text" name="pet.desc" [(ngModel)]="pet.desc"/> <span style="color:red" > {{ descErr }} </span><br>
+
+  Skills:<br>
+  Skill 1: <input type="text" name="pet.skillOne" [(ngModel)]="pet.skillOne"/><br>
+  Skill 2: <input type="text" name="pet.skillTwo" [(ngModel)]="pet.skillTwo"/><br>
+  Skill 3: <input type="text" name="pet.skillThree" [(ngModel)]="pet.skillThree"/><br>
+  <input class="button" type="submit" value="Add pet"/>
+  <button class="button" [routerLink]="['/pets']">Cancel</button>
+</form>

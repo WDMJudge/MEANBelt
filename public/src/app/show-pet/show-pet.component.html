@@ -1,0 +1,13 @@
+<a [routerLink]="['/pets']">Home</a>
+<h3>Details about {{ pet.name }}</h3>
+
+<h3>Pet type: <span>{{ pet.type }}</span></h3>
+<h3>Description: <span>{{ pet.desc }}</span></h3>
+<h3>Skills: <span>{{ pet.skillOne }}</span></h3>
+<p>{{ pet.skillTwo }}</p>
+<p>{{ pet.skillThree }}</p>
+<h3>Likes: <span>{{ pet.likes }}</span></h3>
+
+<!-- <button [ngClass]="{ 'on': switch }" (click)="switch = true" (click)="like()">Like this pet</button> -->
+<button id="like" [disabled]="switch" (click)="switch = true" (click)="like()">Like this pet</button>
+<button id="adopt" (click)="deletePet()" >Adopt this pet!</button>
